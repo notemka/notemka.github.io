@@ -1,0 +1,44 @@
+.content {
+  width: 100%;
+  min-height: 80vh;
+  padding: 20px;
+  background: $color-content;
+  box-sizing: border-box;
+  vertical-align: top;
+
+  @media (max-width: $screen-md) {
+    padding: 20px 10px;
+  }
+
+  &__inner {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      content: "";
+
+      height: 5px;
+    }
+
+    &::before {
+      top: -12px;
+
+      box-shadow: 0 10px 20px 3px $color-content;
+    }
+
+    &::after {
+      bottom: -10px;
+
+      box-shadow: 0 -10px 20px 3px $color-content;
+    }
+  }
+
+  &__msg {
+    text-align: center;
+    color: $font-color--secondary;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,16 @@
+li.msg-item(data-id=id)
+  .msg-item__inner
+    input.msg-item__checkbox(type="checkbox" checked=checked ? true : false)
+    .msg-item__title #{title}
+
+    .msg-item__actions
+      a.msg-link.msg-link--toggle(href="#" title="open") open
+
+      if deleted
+        a.msg-link.msg-link--back(href="#" title="back to inbox" data-action="inbox") back to inbox
+      else
+        a(href="#" class=`${starred ? 'msg-link msg-link--star msg-link--marked' : 'msg-link msg-link--star'}` title="like") like
+
+      a.msg-link.msg-link--remove(href="#" title="delete") delete
+
+  .msg-item__text.hidden #{text}

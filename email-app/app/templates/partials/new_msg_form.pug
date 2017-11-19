@@ -1,0 +1,10 @@
+form.form
+  .form__head
+    h3.form__title New message
+    a.form__link(href="#") Close
+  .form__fields
+    input.form__field.form__field--title#new_msg_title(name="title" placeholder="Title" required="")
+    textarea.form__field.form__field--text#new_msg_text(name="text" placeholder="Type your message" required="")
+  .form__actions
+    input.form__button.button(type="submit" value="Save")
+    span.form__msg Stored in the draft

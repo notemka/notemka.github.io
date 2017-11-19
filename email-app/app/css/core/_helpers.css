@@ -1,0 +1,22 @@
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}

@@ -1,0 +1,9 @@
+.container {
+  width: 85%;
+  height: 100vh;
+  margin: auto;
+
+  @media (max-width: $screen-lg) {
+    width: 90%;
+  }
+}

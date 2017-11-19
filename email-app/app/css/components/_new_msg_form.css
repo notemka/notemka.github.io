@@ -1,0 +1,93 @@
+.form {
+  position: fixed;
+  right: 0;
+  bottom: -150%;
+  max-width: 450px;
+  padding: 20px;
+  background: $color-background;
+  border: 1px solid $color-border;
+  border-radius: 3px;
+  transition: bottom 0.4s;
+
+  &--active {
+    bottom: 0;
+  }
+
+  &__head {
+    margin-bottom: 10px;
+  }
+
+  &__field {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    color: $font-color;
+    background: $color-content;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    outline: none;
+
+    &:focus {
+      border-color: $color-border;
+    }
+
+    &::placeholder {
+      color: darken($color-content, 30%);
+      opacity: 0.4;
+      font-weight: 200;
+    }
+
+    &--title {
+      padding: 5px 10px;
+    }
+
+    &--text {
+      height: 150px;
+      padding: 10px;
+      resize: none;
+
+      @media (max-width: $screen-sm) {
+        height: 100px;
+      }
+    }
+
+    &--error {
+      border-color: $color-trash;
+      box-shadow: 0 0 10px -2px $color-trash;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin: 0;
+    color: $color-second;
+    font-size: initial;
+    font-weight: normal;
+  }
+
+  &__link {
+    float: right;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: svg-load("../../images/close.svg");
+    background-size: cover;
+    color: $color-main;
+    text-indent: -9999px;
+  }
+
+  &__msg {
+    float: right;
+    display: inline-block;
+    color: $color-second;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

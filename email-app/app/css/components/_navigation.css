@@ -1,0 +1,66 @@
+.header-nav {
+  width: 85%;
+  text-align: right;
+
+  @media (max-width: $screen-sm) {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    background: $color-background;
+    border: 1px solid $color-border;
+    text-align: left;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 10px 20px;
+    border-top: 5px solid transparent;
+    color: $font-color;
+    text-decoration: none;
+    transition: 0.2s;
+    font-weight: 600;
+
+    &:hover,
+    &--active {
+      color: $color-hover;
+    }
+
+    &--active {
+      background: $color-content;
+      border-top: 5px solid;
+
+      @media (max-width: $screen-sm) {
+        border: 0;
+      }
+    }
+
+    @media (max-width: $screen-md) {
+      padding: 10px;
+    }
+
+    @media (max-width: $screen-sm) {
+      display: block;
+      border: 0;
+    }
+  }
+
+  &__trigger {
+    display: none;
+    width: 25px;
+    height: 25px;
+    margin: 15px;
+    background: svg-load("../../images/menu.svg") center center no-repeat;
+    background-size: 100%;
+    text-indent: -9999px;
+
+    @media (max-width: $screen-sm) {
+      display: block;
+      margin: 20px;
+    }
+  }
+}
+

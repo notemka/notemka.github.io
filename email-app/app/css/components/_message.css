@@ -1,0 +1,43 @@
+.msg-item {
+  margin-bottom: 5px;
+  border-bottom: 1px solid $color-border;
+
+  &__inner {
+    margin-bottom: 10px;
+  }
+
+  &__checkbox,
+  &__title,
+  &__actions {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__checkbox {
+    margin: 0;
+    margin-right: 10px;
+
+    @media (max-width: $screen-xs) {
+      margin-right: 5px;
+    }
+  }
+
+  &__title {
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__actions {
+    float: right;
+  }
+
+  &__text {
+    padding: 10px;
+    padding-left: 35px;
+    background: $color-content--darken;
+    color: $font-color--secondary;
+    font-style: italic;
+  }
+}

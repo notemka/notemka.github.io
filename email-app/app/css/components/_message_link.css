@@ -1,0 +1,55 @@
+.msg-link {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: top;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--toggle {
+    background-image: svg-load("../../images/chevron-down.svg");
+    background-size: 80%;
+  }
+
+  &--open {
+    background-image: svg-load("../../images/chevron-up.svg");
+    background-size: 80%;
+  }
+
+  &--remove {
+    background-image: svg-load("../../images/remove.svg", fill: $font-color, stroke: $font-color);
+    background-size: 70%;
+
+    &:hover {
+      background-image: svg-load("../../images/remove.svg", fill: $color-trash, stroke: $color-trash);
+    }
+  }
+
+  &--star {
+    background-image: svg-load("../../images/star.svg", fill: $font-color, stroke: $font-color);
+    background-size: 80%;
+
+    &:hover {
+      background-image: svg-load("../../images/star.svg", fill: $color-star, stroke: $color-star);
+    }
+  }
+
+  &--back {
+    background-image: svg-load("../../images/back.svg", fill: $font-color, stroke: $font-color);
+    background-size: 80%;
+
+    &:hover {
+      background-image: svg-load("../../images/back.svg", fill: $color-main, stroke: $color-main);
+    }
+  }
+
+  &--marked {
+    background-image: svg-load("../../images/star.svg", fill: $color-star, stroke: $color-star);
+  }
+}

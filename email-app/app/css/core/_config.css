@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700&subset=cyrillic");
+
+$color-main: #45907b;
+$color-second: #f56435;
+
+$color-background: #fcfaf0;
+$color-content: #f7f2e0;
+$color-content--darken: darken($color-content, 2%);
+$color-hover: #6baf9d;
+$color-trash: #ef4949;
+$color-star: #facf28;
+
+$font-family: "Open Sans", sans-serif;
+$font-size: 14px;
+$font-color: #445361;
+$font-color--secondary: #777;
+$font-color--light: #fff;
+$font-color--error: #ef4949;
+
+$color-border: #e7debc;
+
+$screen-xs: 320px;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1224px;
+$screen-xxl: 1320px;
